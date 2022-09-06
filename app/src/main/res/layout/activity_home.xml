@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background">
+
+    <RelativeLayout
+        android:id="@+id/div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/main_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="Home"
+            android:textColor="#201E1D"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/rounded_corner"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_activity_home"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/div"
+        app:layout_anchorGravity="center" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/bottom_background"
+        app:elevation="16dp"
+        app:itemIconTint="@drawable/bottom_navigation_color_selector"
+        app:itemTextAppearanceActive="@style/menu_text_style"
+        app:itemTextColor="@drawable/bottom_navigation_color_selector"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+
+</RelativeLayout>

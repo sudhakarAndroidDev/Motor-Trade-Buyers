@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <!--                <RelativeLayout-->
+            <!--                    android:id="@+id/not"-->
+            <!--                    android:layout_width="250dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:background="@drawable/searchbackground"-->
+            <!--                    android:layout_marginStart="10dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginBottom="5dp"-->
+            <!--                    android:elevation="2dp"-->
+            <!--                    >-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/txtHeader"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:elevation="2dp"-->
+            <!--                        android:padding="13dp"-->
+            <!--                        android:text="|Search by Make or Model"-->
+            <!--                        android:textColor="#767a8c"-->
+
+            <!--                        android:textSize="15dp" />-->
+            <!--                    <androidx.appcompat.widget.SearchView-->
+            <!--                        android:id="@+id/searchable"-->
+            <!--                        android:layout_centerVertical="true"-->
+            <!--                        android:layout_alignParentRight="true"-->
+            <!--                        android:layout_alignParentEnd="true"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        app:searchIcon="@drawable/ic_search"-->
+            <!--                        android:layout_height="wrap_content" />-->
+            <!--                </RelativeLayout>-->
+
+
+            <EditText
+                android:id="@+id/sample_editText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toLeftOf="@+id/linear"
+                android:background="@drawable/searchbackground"
+                android:drawableRight="@drawable/ic_search"
+                android:elevation="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:hint="Search by Make or Model"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="#8A000000"
+                android:textSize="13dp" />
+
+            <RelativeLayout
+                android:id="@+id/linear"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_toLeftOf="@+id/favorite_icon">
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/badge"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="12dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:scaleX="0.80"
+                    android:scaleY="0.80"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    app:nbBackground="@drawable/notification_badge"
+                    app:nbMaxTextLength="2" />
+
+                <ImageButton
+                    android:id="@+id/filter_btn2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_filter"
+                    android:elevation="8dp" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/favorite_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_favorite"
+                android:elevation="8dp" />
+        </RelativeLayout>
+
+
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/linear1"-->
+        <!--            android:textSize="14dp"-->
+        <!--            android:text="Top Recommendation"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:fontFamily="@font/mulish_regular"-->
+        <!--            android:layout_marginStart="15dp"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            />-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/Relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="200dp"
+                    >
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_tradingItems"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="5dp"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/buyer_item" />
+
+                </RelativeLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/progressBar"
+            style="@style/SpinKitView.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:focusableInTouchMode="true"
+            android:indeterminate="true"
+            app:SpinKit_Color="@color/blue" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/mulish_regular"
+            android:text="No Data Found"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

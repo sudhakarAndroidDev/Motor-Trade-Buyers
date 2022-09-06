@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.postauthenticationui.ui.managebids.ManageBidsFragment">
+
+
+
+    <RelativeLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+
+        <!--                <RelativeLayout-->
+        <!--                    android:id="@+id/not"-->
+        <!--                    android:layout_width="250dp"-->
+        <!--                    android:layout_height="50dp"-->
+        <!--                    android:background="@drawable/searchbackground"-->
+        <!--                    android:layout_marginStart="10dp"-->
+        <!--                    android:layout_marginTop="5dp"-->
+        <!--                    android:layout_marginBottom="5dp"-->
+        <!--                    android:elevation="2dp"-->
+        <!--                    >-->
+
+        <!--                    <TextView-->
+        <!--                        android:id="@+id/txtHeader"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:elevation="2dp"-->
+        <!--                        android:padding="13dp"-->
+        <!--                        android:text="|Search by Make or Model"-->
+        <!--                        android:textColor="#767a8c"-->
+
+        <!--                        android:textSize="15dp" />-->
+        <!--                    <androidx.appcompat.widget.SearchView-->
+        <!--                        android:id="@+id/searchable"-->
+        <!--                        android:layout_centerVertical="true"-->
+        <!--                        android:layout_alignParentRight="true"-->
+        <!--                        android:layout_alignParentEnd="true"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        app:searchIcon="@drawable/ic_search"-->
+        <!--                        android:layout_height="wrap_content" />-->
+        <!--                </RelativeLayout>-->
+
+
+        <EditText
+            android:id="@+id/sample_editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/filter_btn2"
+            android:background="@drawable/searchbackground"
+            android:drawableRight="@drawable/ic_search"
+            android:elevation="2dp"
+            android:fontFamily="@font/mulish_regular"
+            android:hint="Search by Make or Model"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="#8A000000"
+            android:textSize="13dp" />
+
+        <ImageButton
+            android:id="@+id/filter_btn2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/favorite_icon"
+            android:background="@drawable/ic_filter"
+            android:elevation="8dp" />
+        <ImageButton
+            android:id="@+id/favorite_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:elevation="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_favorite"
+            />
+    </RelativeLayout>
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tabLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/linear1"-->
+<!--        android:elevation="2dp"-->
+<!--        app:tabIndicatorColor="@color/blue"-->
+<!--        app:tabSelectedTextColor="@color/blue"-->
+<!--        app:tabTextAppearance="@style/MineCustomTabText" />-->
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/viewPager"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/tabLayout"-->
+<!--        tools:layout_editor_absoluteX="8dp" />-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/blue"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="@color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="Current Bids"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="Won Bids"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:text="Declined Bids"
+            android:textColor="@color/black" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+    </FrameLayout>
+
+</RelativeLayout>

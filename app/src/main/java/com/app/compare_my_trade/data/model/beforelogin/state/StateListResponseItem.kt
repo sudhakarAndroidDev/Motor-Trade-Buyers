@@ -1,0 +1,5 @@
+package com.app.compare_my_trade.data.model.beforelogin.state
+
+ class StateListResponseItem {
+
+}

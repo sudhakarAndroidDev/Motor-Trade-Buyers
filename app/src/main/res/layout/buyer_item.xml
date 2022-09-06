@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_itemRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/cardView_home_elevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/colorItemListDetails"
+            app:strokeWidth="0.1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_itemCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shapeableImageView"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/rounded_corner" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtv_itemFeatured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/mulish_medium"
+                    android:text="Featured"
+                    android:textColor="@color/colorCardFeaturedText"
+                    android:textSize="@dimen/text12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                    app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtv_itemDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/mulish_semibold"
+                    android:text="12 Feb 2021"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text12sp"
+                    app:layout_constraintStart_toEndOf="@+id/mtv_itemFeatured"
+                    app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtv_itemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text13sp"
+                    app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/mtv_itemDate" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text13sp"
+                    app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/mtv_itemTitle" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtv_itemAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="$ 25,000"
+                    android:textColor="@color/colorItemColor"
+                    android:textSize="@dimen/text14sp"
+                    app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/model" />
+
+                <RelativeLayout
+                    android:id="@+id/cardView"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/circle_bg"
+                    android:elevation="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/mtv_itemTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                        <ImageButton
+                            android:id="@+id/siv_favorite"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_favorite_not_selected"
+                          />
+
+                </RelativeLayout>
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/rv_typeLists"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_marginEnd="50dp"-->
+                <!--                    android:layout_marginBottom="8dp"-->
+                <!--                    android:numColumns="3"-->
+                <!--                    android:visibility="visible"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/shapeableImageView"-->
+                <!--                    tools:listitem="@layout/item_type_details" />-->
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/shapeableImageView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/v_1" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/fuel_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="Fuel Type"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/v_2" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/transmission"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="Fuel Type"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/v_3" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/odometer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="Fuel Type"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingEnd="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/v_4" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/drive_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mulish_regular"
+                                android:text="Fuel Type"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

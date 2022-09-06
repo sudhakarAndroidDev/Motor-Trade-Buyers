@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="8dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/currentbackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_itemCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/rounded_corner"
+                 />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtv_itemFeatured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/mulish_medium"
+                android:text="Featured"
+                android:textColor="@color/colorCardFeaturedText"
+                android:textSize="@dimen/text12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_semibold"
+                android:text="12 Feb 2021"
+                android:textSize="@dimen/text12sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/mtv_itemFeatured"
+                app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toBottomOf="@+id/date" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textSize="@dimen/text13sp"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="$ 25,000"
+                android:textColor="@color/colorItemColor"
+                android:textSize="@dimen/text14sp"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toBottomOf="@+id/model" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <RelativeLayout
+                    android:id="@+id/cardView"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/circle_bg"
+                    android:layout_alignParentEnd="true"
+                    >
+
+
+
+                        <ImageButton
+                            android:id="@+id/favorite_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/heart3"
+                            android:layout_gravity="center" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <!--                <androidx.recyclerview.widget.RecyclerView-->
+            <!--                    android:id="@+id/rv_typeLists"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="8dp"-->
+            <!--                    android:layout_marginEnd="50dp"-->
+            <!--                    android:layout_marginBottom="8dp"-->
+            <!--                    android:numColumns="3"-->
+            <!--                    android:visibility="visible"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView"-->
+            <!--                    app:layout_constraintTop_toBottomOf="@+id/shapeableImageView"-->
+            <!--                    tools:listitem="@layout/item_type_details" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:fontFamily="@font/mulish_regular"
+                />
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:layout_marginStart="10dp"
+                android:textColor="#90D93C"
+                android:fontFamily="@font/mulish_regular"
+                />
+
+
+        </LinearLayout>
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerview5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="50dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:numColumns="3"-->
+<!--            />-->
+
+    </LinearLayout>
+</LinearLayout>

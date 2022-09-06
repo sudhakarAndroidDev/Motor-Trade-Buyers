@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="8dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/currentbackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image2"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    app:shapeAppearanceOverlay="@style/rounded_corner"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 feb 20021"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:layout_marginStart="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BMW 7 Series (2005)"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="73OLD Seden"
+                    android:fontFamily="@font/mulish_regular"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:textSize="13dp"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AD ID - 123456789"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#60000000"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/mulish_regular"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/v_23"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="Seller Name"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/s_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kane williamson"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/v_9"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Bids Price"
+                android:fontFamily="@font/mulish_regular"
+                android:layout_marginStart="10dp"
+                android:textSize="13dp"
+                />
+            <TextView
+                android:id="@+id/my_bids_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$46,000"
+                android:fontFamily="@font/mulish_regular"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                />
+        </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:layout_marginEnd="15dp"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/v_22"
+                    android:layout_gravity="bottom"
+                    />2
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/v_10"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms and Conditions"
+                android:layout_marginStart="15dp"
+                android:textColor="#00B99F"
+                android:textSize="14dp"
+                android:visibility="gone"
+                android:fontFamily="@font/mulish_regular"
+                />
+
+
+
+            <TextView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Car Detail >"
+                android:gravity="end"
+                android:textSize="14dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
